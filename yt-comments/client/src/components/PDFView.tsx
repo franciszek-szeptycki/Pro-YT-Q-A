@@ -22,7 +22,7 @@ export default () => {
 
     const saveAsPDF = async () => {
         axios({
-            url: 'http://localhost:3000/pdf/',
+            url: '0.0.0.0:3000/pdf/',
             method: 'POST',
             responseType: 'blob',
             data: {
