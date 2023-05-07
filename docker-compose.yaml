@@ -3,16 +3,10 @@ version: "3"
 services:
     node-server:
         build: ./node-server
-        networks:
-            - example
+        ports:
+            - "0.0.0.0:3000:3000"
 
     yt-comments:
         build: ./yt-comments
-        networks:
-            - example
         ports:
             - "8000:8000"
-
-networks:
-  example:
-    driver: bridge
