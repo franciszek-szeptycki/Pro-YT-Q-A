@@ -1,3 +1,4 @@
-klucze.cer
+klucz.cer
 node-server/node_modules/*
 yt-comments/venv/*
+deploy.sh
