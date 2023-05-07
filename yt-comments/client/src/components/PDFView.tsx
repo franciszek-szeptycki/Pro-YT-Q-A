@@ -24,7 +24,7 @@ export default () => {
         axios({
             // url: '0.0.0.0:3000/pdf/',
             url: 'http://13.41.159.203/:3000/pdf/',
-            13.41.159.203
+//             13.41.159.203
             method: 'POST',
             responseType: 'blob',
             data: {
