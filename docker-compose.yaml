@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+    node-server:
+        build: ./node-server
+        ports:
+            - "3000:3000"
+        # volumes:
+        #     - ./node-server:/app
+
+    yt-comments:
+        build: ./yt-comments
+        ports:
+            - "8000:8000"
+        # volumes:
+        #     - ./yt-comments:/app

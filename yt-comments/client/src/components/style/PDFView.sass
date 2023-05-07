@@ -1,0 +1,65 @@
+@import "src/assets/styles/var"
+
+
+.pdf-view.hidden
+  width: 0
+  left: 50%
+
+  .pdf-view__btn
+      transform: scale(0%)
+
+.pdf-view
+  width: 100vw
+  height: 100vh
+
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 2
+
+  background-color: rgba(0, 0, 0, 0.5)
+
+  overflow-y: scroll
+  overflow-x: hidden
+
+  transition: .2s
+
+  &::-webkit-scrollbar
+    display: none
+
+
+  &__btn
+    height: 80px
+    width: 80px
+    background-color: darkred
+    border-radius: 50%
+    border: none
+
+    position: fixed
+    top: 140px
+    right: 30px
+    z-index: 3
+
+    cursor: pointer
+    transition: .2s
+
+    &:hover
+      background-color: darken(darkred, 10%)
+
+    i
+      color: white
+      font-size: 2.3rem
+      transform: translateX(2px)
+
+  &__page
+    width: calc(80vw - 340px)
+    margin: 30px auto
+
+    background-color: white
+
+    padding: 80px
+
+    &-ul
+      width: 100%
+      @include flex-list
+      gap: 10px

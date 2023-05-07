@@ -1,0 +1,35 @@
+@import "src/assets/styles/var"
+
+
+.comment.selected
+  background-color: #eaeaea
+  transform: scale(101%)
+
+.selected:hover
+  transform: scale(100.5%) !important
+
+.comment
+  background-color: white
+  border-radius: 5px
+
+  padding: 20px
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+  position: relative
+  transition: .2s
+  cursor: pointer
+
+  &:hover
+    transform: scale(101%)
+
+  &__top
+    display: flex
+    align-items: center
+    gap: 10px
+
+    img
+      border-radius: 50%
+  &__text
+    text-align: justify

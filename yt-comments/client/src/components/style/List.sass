@@ -1,0 +1,76 @@
+@import "src/assets/styles/var"
+
+
+.list
+  background-color: #f6f6f6
+  position: relative
+
+  .video-info
+    max-width: 1200px
+    width: 100%
+    margin: 0 auto
+
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-template-rows: repeat(2, auto) 1fr
+    padding: 30px 30px 0
+    gap: 30px
+    overflow: hidden
+
+    &__thumbnail
+        grid-row: 1 / 4
+        font-size: 0
+
+    &__title, &__chanel, &___date
+      flex-grow: 1
+      display: block
+
+    &__title
+      font-size: 1.5rem
+
+    &__chanel
+        font-size: 1.3rem
+
+  .pdf-btn.fixed
+    position: fixed
+    left: calc(100% - 110px)
+
+  .pdf-btn
+    height: 80px
+    width: 80px
+
+    position: absolute
+    top: 30px
+    right: 30px
+    z-index: 3
+
+    @include flex-center
+    background-color: $aside-theme
+    border-radius: 50%
+    cursor: pointer
+    transition: .2s
+
+    &:hover
+      background-color: darken($aside-theme, 10%)
+
+    i
+      color: white
+      font-size: 2.3rem
+      transform: translateX(2px)
+
+
+
+  .comments-quantity
+    padding-top: 30px
+    text-align: center
+    font-size: 1.5rem
+    text-transform: capitalize
+
+
+  .list-ul
+    @include flex-list
+    gap: 30px
+    max-width: 1200px
+    width: 100%
+    margin: auto
+    padding: 30px
