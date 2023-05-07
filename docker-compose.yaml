@@ -5,10 +5,6 @@ services:
         build: ./node-server
         networks:
             - example
-#        ports:
-            - "0.0.0.0:3000:3000"
-        # volumes:
-        #     - ./node-server:/app
 
     yt-comments:
         build: ./yt-comments
@@ -16,5 +12,7 @@ services:
             - example
         ports:
             - "8000:8000"
-        # volumes:
-        #     - ./yt-comments:/app
+
+networks:
+  example:
+    driver: bridge
